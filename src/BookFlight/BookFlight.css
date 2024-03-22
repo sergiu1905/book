@@ -1,0 +1,78 @@
+.page {
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.container {
+    border: 2px solid grey;
+    border-radius: 10px;
+    width: 14rem;
+    height: auto;
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: lightgray;
+    border-bottom: 2px solid grey;
+
+}
+
+
+.decoration {
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    margin: 3px;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.container_body {
+    /* display: flex; */
+    background-color: lightcyan;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.container_options {
+    width: 95%;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: lightcyan;
+}
+
+.container_date input {
+    width: 94%;
+    margin: 5px 5px;
+    padding: 0;
+
+
+}
+
+button {
+
+    width: 95%;
+    margin: 5px
+}
