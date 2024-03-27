@@ -4,12 +4,11 @@ export default function BookFlight() {
   const [selectedOption, setSelectedOption] = useState('');
   const [oneWayDate, setOneWayDate] = useState('');
   const [returnDate, setReturnDate] = useState('');
-  const [isDateDesablet, setIsDateDesablet] = useState(true);
+
   const [isBooked, setIsBooked] = useState(false);
   const handleChangeOption = (event) => {
     const optionFlight = event.target.value;
     setSelectedOption(optionFlight);
-    setIsDateDesablet(false);
   };
   const handleOneWayDate = (event) => {
     setOneWayDate(event.target.value);
@@ -36,7 +35,6 @@ export default function BookFlight() {
       setOneWayDate('');
       setReturnDate('');
       setSelectedOption('');
-      setIsDateDesablet(true);
       setTimeout(() => {
         setIsBooked(false);
       }, 5000);
@@ -44,6 +42,8 @@ export default function BookFlight() {
   };
 
   const currentDate = new Date().toISOString().split('T')[0];
+  const isOptionNotSelected =
+    selectedOption !== 'option1' && selectedOption !== 'option2';
   return (
     <div className="page">
       <div className="container">
@@ -82,10 +82,7 @@ export default function BookFlight() {
               value={oneWayDate}
               onChange={handleOneWayDate}
               min={currentDate}
-              disabled={
-                isBooked ||
-                (selectedOption !== 'option1' && selectedOption !== 'option2')
-              }
+              disabled={isBooked || isOptionNotSelected}
             />
             <input
               type="date"
