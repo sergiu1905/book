@@ -83,9 +83,8 @@ export default function BookFlight() {
               onChange={handleOneWayDate}
               min={currentDate}
               disabled={
-                !isBooked &&
-                selectedOption !== 'option1' &&
-                selectedOption !== 'option2'
+                isBooked ||
+                (selectedOption !== 'option1' && selectedOption !== 'option2')
               }
             />
             <input
